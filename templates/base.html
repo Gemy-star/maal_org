@@ -845,7 +845,8 @@
         media='all'>
     <link rel='stylesheet' id='rs-plugin-settings-css'
         href="{% static 'wp-content/plugins/revslider/public/assets/css/rs6.css' %}" type='text/css' media='all'>
-    <style id='rs-plugin-settings-inline-css' type='text/css'>
+    {% block imports %}{% endblock imports %}
+        <style id='rs-plugin-settings-inline-css' type='text/css'>
         .twoxtwo {
             background-color: rgba(0, 6, 18, 0.5) !important;
             background-image: none !important
@@ -1059,6 +1060,7 @@
 
         if (window.RS_MODULES.checkMinimal !== undefined) { window.RS_MODULES.checkMinimal(); };
     </script>
+    {% block js %}{% endblock js %}
 
 </body>
 
